@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    {{ partial "header.html" . }}
+
+  <div class="header-view">
+    <div class="usa-grid">
+      <h1><a class="link-textblack" href="/updates/">Updates</a></h1>
+    </div>
+  </div>
+  <div class="usa-grid">
+    <div>
+      {{ range .Data.Pages }}
+      {{ .Render "li" }}
+      {{ end }}
+    </div>
+  </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "javascript.html" . }}
+
+  </body>
+</html>
